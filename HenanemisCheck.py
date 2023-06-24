@@ -97,7 +97,7 @@ if __name__=='__main__':
 
         if sign == 'Lack':
             print('lack of '+i+' file')
-
+    
                 # sectorlistinfile = filereader[0]
                 # tt=removeChnAndCharacter(sectorlistinfile)
                 # print(tt)
