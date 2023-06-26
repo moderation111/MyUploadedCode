@@ -50,35 +50,37 @@
 !100   format(I4) 
       
       !!!!homework calculate m cm inch
-      integer, parameter :: DP = Selected_Real_Kind(r=50,p=14)
-      character(len=5) ::choice
-      real(kind=DP)::value
-      type::distance
-          real::m,cm,inch
-      end type distance
-      type(distance)::b
-          
-      read(*,*)choice
-      read(*,*)value
-      if (trim(choice) .eq. 'm')then
-          b%m = value
-          b%cm = value*10
-          b%inch = b%cm/30.48
-      else if(trim(choice) .eq. 'cm')then
-          b%cm = value
-          b%m = value/10
-          b%inch = b%cm/30.48                   
-      else if(trim(choice) .eq. 'inch')then             
-          b%inch = value
-          b%cm = value*30.48
-          b%m = b%cm/10         
-      end if
+!      integer, parameter :: DP = Selected_Real_Kind(r=50,p=14)
+!      character(len=5) ::choice
+!      real(kind=DP)::value
+!      type::distance
+!          real::m,cm,inch
+!      end type distance
+!      type(distance)::b
+!          
+!      read(*,*)choice
+!      read(*,*)value
+!      if (trim(choice) .eq. 'm')then
+!          b%m = value
+!          b%cm = value*10
+!          b%inch = b%cm/30.48
+!      else if(trim(choice) .eq. 'cm')then
+!          b%cm = value
+!          b%m = value/10
+!          b%inch = b%cm/30.48                   
+!      else if(trim(choice) .eq. 'inch')then             
+!          b%inch = value
+!          b%cm = value*30.48
+!          b%m = b%cm/10         
+!      end if
+!      
+!      write(*,100) b%cm,b%m,b%inch
+!100   format(F,"CM",/,F,"M",/,F,"Inch")
       
-      write(*,100) b%cm,b%m,b%inch
-100   format(F,"CM",/,F,"M",/,F,"Inch")
-      
+      !call test1
       
       do while(T)
+          call test2
       end do
       stop
       end program main
