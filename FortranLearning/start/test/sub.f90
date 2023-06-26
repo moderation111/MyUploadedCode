@@ -50,3 +50,27 @@ write(*,100) grade
     
 end subroutine test2
     
+subroutine test3    
+    real :: a,b,ans
+    character :: operator1
+    read(*,*)a
+    read(*,"(A1)")operator1 !不赋值格式时，不会读 /
+    read(*,*)b
+    
+    select case(operator1)
+    case("+")    
+        ans = a+b
+    case("-")
+        ans = a-b
+    case("*")
+        ans = a*b
+    case("/")
+        ans = a/b
+    case default
+        write(*,"('Unknown operator1',A1)")operator1
+        stop
+    end select
+        
+    write(*,"(F6.2,A1,F6.2,'=',F6.2)")a,operator1,b,ans   
+    
+end subroutine test3 

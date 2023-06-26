@@ -80,7 +80,7 @@
       !call test1
       
       do while(T)
-          call test2
+          call test3
       end do
       stop
       end program main
